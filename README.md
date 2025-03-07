@@ -69,7 +69,7 @@ catsing --stay
 
 ## Author
 
-- **Your Name**: [Your GitHub](https://github.com/FenchsApps)
+- **Your Name**: [FenchsApps](https://github.com/FenchsApps)
 - **Repository**: [catsing](https://github.com/FenchsApps/catsing)
 
 ---
