@@ -7,7 +7,7 @@
 ## Installation
 
 1. Download `tar.gz` file
-2. Enter in console those `commands`
+2. Enter in console these `commands`
    ```bash
    cd path/to/your/catsing-1.0.tar.gz
    chmod +x catsing
