@@ -6,44 +6,13 @@
 
 ## Installation
 
-### For Gentoo
-1. Add the overlay containing the `catsing` package.
-2. Install the package:
+1. Download `tar.gz` file
+2. Enter in console those `commands`
    ```bash
-   emerge app-misc/catsing
-   ```
-
-### For Arch Linux
-1. Install the package from AUR:
-   ```bash
-   yay -S catsing
-   ```
-
-### Manual Installation
-1. Download the script and the `cat.wav` file:
-   ```bash
-   git clone https://github.com/yourusername/catsing.git
-   cd catsing
-   ```
-2. Make the script executable:
-   ```bash
-   chmod +x catsing.sh
-   ```
-3. (Optional) Copy the script and sound file to system directories:
-   ```bash
-   sudo cp catsing.sh /usr/local/bin/catsing
-   sudo mkdir -p /usr/share/catsing
-   sudo cp cat.wav /usr/share/catsing/
-   ```
-
----
-
+   cd path/to/your/catsing-1.0.tar.gz
+   chmod +x catsing
+   bash catsing
 ## Usage
-
-Run the script with the command:
-```bash
-catsing
-```
 
 ### Main Commands
 1. **`catsing --stay`**:
