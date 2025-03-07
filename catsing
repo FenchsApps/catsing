@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# Определяем директорию, в которой находится скрипт
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Функция для отображения кота
+draw_cat() {
+    echo "    _._     _,-'\"\"\`-._    "
+    echo "   (,-.\`._,'(       |\\\`-/|"
+    echo "       \`-.-' \\ )-\`( , o o)"
+    echo "             \`-    \\\`_\\\"'-\`"
+}
+
+# Функция для увеличения кота
+enlarge_cat() {
+    echo "          .__....._             _.....__,"
+    echo "            .\": o :':         ;': o :\"."
+    echo "            \`. \`-' .'.       .'. \`-' .'"
+    echo "              \`---'             \`---'"
+    echo ""
+    echo "    _...----...      ...   ...      ...----..._"
+    echo " .-'__..-\"\"'----    \`.  \`\"\`  .'    ----'\"\"-..__\`-."
+    echo "'.-'   _.--\"\"\"'       \`-._.-'       '\"\"\"--._   \`-.\`"
+    echo "'  .-\"'                  :                  \`\"-.  \`"
+    echo "  '   \`.              _.'\"'._              .'   \`"
+    echo "        \`.       ,.-'\"       \"'-.,       .'"
+    echo "          \`.                           .'"
+    echo "            \`-._                   _.-'"
+    echo "                \`\"'--...___...--'\"\`"
+}
+
+# Функция для мяуканья
+meow() {
+    for i in {1..3}; do
+        echo "Meow!"
+        # Проверяем, существует ли файл cat.wav в директории скрипта
+        if [ -f "$SCRIPT_DIR/cat.wav" ]; then
+            paplay "$SCRIPT_DIR/cat.wav" 2>/dev/null || aplay "$SCRIPT_DIR/cat.wav" 2>/dev/null || echo "Sound playback not supported!"
+        else
+            echo "cat.wav not found in the script directory: $SCRIPT_DIR"
+        fi
+        sleep 1
+    done
+    echo "My computer has been hacked by a cat!"
+    enlarge_cat
+}
+
+# Основной цикл
+while true; do
+    clear
+    draw_cat
+    echo "1. catsing --stay"
+    echo "2. catsing --meow"
+    read -p "Choose a command (1 or 2): " choice
+
+    case $choice in
+        1)
+            clear
+            enlarge_cat
+            read -p "Press Enter to continue..."
+            ;;
+        2)
+            clear
+            meow
+            read -p "Press Enter to continue..."
+            ;;
+        *)
+            echo "Invalid choice. Please try again."
+            sleep 1
+            ;;
+    esac
+done
